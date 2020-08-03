@@ -1,7 +1,8 @@
-$c1: pink;
+$c1: rgb(255, 214, 233);
 // $c1: linear-gradient(0deg, rgba(239,71,111,0.19511554621848737) 0%, rgba(255,209,102,0.19791666666666663) 95%);
-$c2: rgb(255, 65, 65, 0.5);
-$c3: rgba(0, 128, 0, 0.5);
+$c2: rgba(255, 231, 218, 0.637);
+$c3: rgba(106, 255, 106, 0.24);
+$c4: rgba(193, 255, 151, 0.164);
 body{
   font-family: helvetica;
   margin: 0;
@@ -10,22 +11,26 @@ body{
 .frontpage-container{
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .one-container{
   background: $c1;
+  width: 60%;
 
 }
 .one{
   position: relative;
   padding: 6rem 1rem 1rem;
   height: 50vh;
+  width: 100%;
   // background-color: blue;
   background-image: url(assets/IMG_20200723_132500.jpg);
   mix-blend-mode: exclusion;
   h1{
     padding: 0.3em;
-    font-size: 3em;;
-    transform: translateX(10vw);
+    padding-left: 5vw;
+    font-size: 3em;
+    transform: translateX(-5vw);
     margin-right: 10vw;
     background: $c2;
     display: inline-block;
@@ -39,17 +44,26 @@ body{
     display: inline-block;
   }
   h1::selection, h2::selection{
-    background-color: pink;
-    color: azure;
+    background-color: white;
+    color: black;
   }
-  div{
+  .div1{
     z-index: -4;
     position: absolute;
-    width: 41%;
-    height: 73%;
+    width: 101%;
+    height: 103%;
     background: $c3;
     top: 6%;
-    left: 21%;
+    left: 11%;
+  }
+  .div2{
+    z-index: -4;
+    position: absolute;
+    width: 30%;
+    height: 53%;
+    background: $c4;
+    bottom: -7%;
+    left: -5%;
     overflow: hidden;
   }
 }
